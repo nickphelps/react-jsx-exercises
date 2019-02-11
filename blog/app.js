@@ -1,3 +1,13 @@
+
+const myHeaderProps = (props) => {
+    return (
+        <div>
+            {Header}
+        </div>
+    )
+}
+
+
 let Header = () => {
     return <span>Design a header for your blog</span>
 }
@@ -9,8 +19,12 @@ let Footer = () => {
 }
 
 let Blog = () => {
-    return <span>Make this Component render the header, article, and footer</span>
+    // return <span>Make this Component render the header, article, and footer</span>
+    return <span><h1><Header/></h1>
+            <h3><Article/></h3>
+            <h3><Footer/></h3></span>
 }
 
 
 ReactDOM.render(<Blog />, document.getElementById('root'))
+
