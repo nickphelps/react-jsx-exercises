@@ -26,7 +26,6 @@ const InputForm = () => {
 
 const UserInput = () => {
         const userInputValue = document.getElementById('userInput').value
-        console.log(userInputValue)
         let myRenderHTML = []
         for (let i = 0; i < userInputValue; i++) {
             myRenderHTML.push(<ListGroupItem />)
@@ -35,6 +34,13 @@ const UserInput = () => {
         myRenderHTML.join('')
         ReactDOM.render(myRenderHTML, document.getElementById('user-input'))
 }
+
+//common way of rentering
+// let fruits = ['cherry, orange, strawberry']
+
+// {myFruits.map(funcion (name) {
+//     return <MyFirstComponent name={name}/>
+// })}
 
 ReactDOM.render(<InputForm />, document.getElementById('user-input'))
 
